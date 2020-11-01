@@ -19,8 +19,8 @@ import javax.swing.JOptionPane;
 public class Conexion {
     
     private Connection con = null;
-    String prueba = "solamente es una varible de prueba";
-    String prueba3= "Es la tercera prueba";
+    String prueba = "solamente es una varible de prueba"; 
+    int cero = 0;
 
     public Connection getCon() {
         return con;
@@ -29,7 +29,7 @@ public class Conexion {
     public boolean conectar() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/constructoraSV","root","");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/constructoraSV","root","1234");
 
             return true;
 
