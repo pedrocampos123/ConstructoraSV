@@ -19,6 +19,8 @@ import javax.swing.JOptionPane;
 public class Conexion {
     
     private Connection con = null;
+    String prueba = "solamente es una varible de prueba"; 
+    int cero = 0;
 
     public Connection getCon() {
         return con;
