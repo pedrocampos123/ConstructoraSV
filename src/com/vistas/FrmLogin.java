@@ -31,6 +31,8 @@ public class FrmLogin extends javax.swing.JFrame {
      */
     public FrmLogin() {
         initComponents();
+        setResizable(false);
+        setLocationRelativeTo(null);
         cargarComboRol(cmbRol, (ArrayList<Rol>) daoRol.mostrarRol());
     }
 

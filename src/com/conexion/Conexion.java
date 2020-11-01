@@ -19,8 +19,6 @@ import javax.swing.JOptionPane;
 public class Conexion {
     
     private Connection con = null;
-    String prueba = "solamente es una varible de prueba"; 
-    int cero = 0;
 
     public Connection getCon() {
         return con;
@@ -29,12 +27,12 @@ public class Conexion {
     public boolean conectar() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/constructorasv", "root", "1234");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/constructoraSV","root","");
 
             return true;
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Lamentablemnte no se a podido conectar al servidor", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Lamentablemnte no se ha podido conectar al servidor", "Error", JOptionPane.ERROR_MESSAGE);
             return false;
         }
     }
@@ -48,7 +46,7 @@ public class Conexion {
             }
             return true;
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Lamentablemente no se a podido desconectar", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Lamentablemente no se ha podido desconectar", "Error", JOptionPane.ERROR_MESSAGE);
             return false;
         }
     }
