@@ -20,7 +20,6 @@ public class Conexion {
     
     private Connection con = null;
     String prueba = "solamente es una varible de prueba";
-    String prueba2 = "Prueba 2 en subida";
 
     public Connection getCon() {
         return con;
