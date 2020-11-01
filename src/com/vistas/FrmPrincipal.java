@@ -68,7 +68,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         desktopPane = new javax.swing.JDesktopPane();
-        dkpFormulario = new javax.swing.JDesktopPane();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -79,20 +78,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         deleteMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        javax.swing.GroupLayout dkpFormularioLayout = new javax.swing.GroupLayout(dkpFormulario);
-        dkpFormulario.setLayout(dkpFormularioLayout);
-        dkpFormularioLayout.setHorizontalGroup(
-            dkpFormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
-        );
-        dkpFormularioLayout.setVerticalGroup(
-            dkpFormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
-        );
-
-        desktopPane.add(dkpFormulario);
-        dkpFormulario.setBounds(10, 20, 380, 250);
 
         fileMenu.setMnemonic('f');
         fileMenu.setText("Ventanas");
@@ -180,7 +165,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem cutMenuItem;
     private javax.swing.JMenuItem deleteMenuItem;
     private javax.swing.JDesktopPane desktopPane;
-    private javax.swing.JDesktopPane dkpFormulario;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenuBar menuBar;
