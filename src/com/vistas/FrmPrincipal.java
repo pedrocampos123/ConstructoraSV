@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.vistas;
 
+package com.vistas;
+import com.vistas.FrmProyecto;
 /**
  * Nombre de la clase: ComboItem
  * Fecha: 26/10/2020
@@ -67,11 +63,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        desktopPane = new javax.swing.JDesktopPane();
-        dkpFormulario = new javax.swing.JDesktopPane();
+        dskPrincipal = new javax.swing.JDesktopPane();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
-        openMenuItem = new javax.swing.JMenuItem();
+        proyectoItem = new javax.swing.JMenuItem();
         editMenu = new javax.swing.JMenu();
         cutMenuItem = new javax.swing.JMenuItem();
         copyMenuItem = new javax.swing.JMenuItem();
@@ -80,26 +75,27 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout dkpFormularioLayout = new javax.swing.GroupLayout(dkpFormulario);
-        dkpFormulario.setLayout(dkpFormularioLayout);
-        dkpFormularioLayout.setHorizontalGroup(
-            dkpFormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+        javax.swing.GroupLayout dskPrincipalLayout = new javax.swing.GroupLayout(dskPrincipal);
+        dskPrincipal.setLayout(dskPrincipalLayout);
+        dskPrincipalLayout.setHorizontalGroup(
+            dskPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 535, Short.MAX_VALUE)
         );
-        dkpFormularioLayout.setVerticalGroup(
-            dkpFormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
+        dskPrincipalLayout.setVerticalGroup(
+            dskPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 355, Short.MAX_VALUE)
         );
-
-        desktopPane.add(dkpFormulario);
-        dkpFormulario.setBounds(10, 20, 380, 250);
 
         fileMenu.setMnemonic('f');
         fileMenu.setText("Ventanas");
 
-        openMenuItem.setMnemonic('o');
-        openMenuItem.setText("Proyecto");
-        fileMenu.add(openMenuItem);
+        proyectoItem.setText("Proyecto");
+        proyectoItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                proyectoItemActionPerformed(evt);
+            }
+        });
+        fileMenu.add(proyectoItem);
 
         menuBar.add(fileMenu);
 
@@ -130,15 +126,27 @@ public class FrmPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(dskPrincipal)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(dskPrincipal)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void proyectoItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proyectoItemActionPerformed
+        FrmProyecto frm = new FrmProyecto();
+        dskPrincipal.add(frm);
+        frm.setVisible(true);
+    }//GEN-LAST:event_proyectoItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,13 +187,12 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem copyMenuItem;
     private javax.swing.JMenuItem cutMenuItem;
     private javax.swing.JMenuItem deleteMenuItem;
-    private javax.swing.JDesktopPane desktopPane;
-    private javax.swing.JDesktopPane dkpFormulario;
+    private javax.swing.JDesktopPane dskPrincipal;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenuBar menuBar;
-    private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem pasteMenuItem;
+    private javax.swing.JMenuItem proyectoItem;
     // End of variables declaration//GEN-END:variables
 
 }
