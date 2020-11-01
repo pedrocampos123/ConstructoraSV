@@ -1,17 +1,19 @@
-
 package com.vistas;
+
 import com.vistas.FrmProyecto;
+
 /**
- * Nombre de la clase: ComboItem
- * Fecha: 26/10/2020
- * CopyRigth: Pedro Campos 
+ * Nombre de la clase: FrmPrincipal 
+ * Fecha: 1/11/2020 
+ * CopyRigth: Pedro Campos
  * Version: 1.0
  * @author pedro
  */
 public class FrmPrincipal extends javax.swing.JFrame {
 
     static public String nivel;
-    
+    private FrmProyecto formulario = null;
+
     /**
      * Creates new form FrmPrincipal
      */
@@ -20,38 +22,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         setResizable(true);
         setLocationRelativeTo(null);
         setExtendedState(FrmPrincipal.MAXIMIZED_BOTH);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
     }
 
     /**
@@ -79,11 +50,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
         dskPrincipal.setLayout(dskPrincipalLayout);
         dskPrincipalLayout.setHorizontalGroup(
             dskPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 535, Short.MAX_VALUE)
+            .addGap(0, 555, Short.MAX_VALUE)
         );
         dskPrincipalLayout.setVerticalGroup(
             dskPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 355, Short.MAX_VALUE)
+            .addGap(0, 377, Short.MAX_VALUE)
         );
 
         fileMenu.setMnemonic('f');
@@ -126,26 +97,22 @@ public class FrmPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(dskPrincipal)
-                .addContainerGap())
+            .addComponent(dskPrincipal)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(dskPrincipal)
-                .addContainerGap())
+            .addComponent(dskPrincipal)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void proyectoItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proyectoItemActionPerformed
-        FrmProyecto frm = new FrmProyecto();
-        dskPrincipal.add(frm);
-        frm.setVisible(true);
+        if (formulario == null || formulario.isClosed()) {
+            formulario = new FrmProyecto();
+            this.dskPrincipal.add(formulario);
+        }
+        formulario.setVisible(true);
     }//GEN-LAST:event_proyectoItemActionPerformed
 
     /**

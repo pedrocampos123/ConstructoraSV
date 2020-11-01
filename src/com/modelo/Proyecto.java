@@ -11,19 +11,37 @@ package com.modelo;
 public class Proyecto {
     private int idProyecto;
     private String nombreProyecto;
-    private String fechaInicio;
     private String tiempoEstimado;
+    private String fechaInicio;
     private double precioTotal;
+    private int idUbicacion;
 
     public Proyecto() {
     }
 
-    public Proyecto(int idProyecto, String nombreProyecto, String fechaInicio, String tiempoEstimado, double precioTotal) {
+    public Proyecto(int idProyecto, String nombreProyecto, String tiempoEstimado, String fechaInicio, double precioTotal, int idUbicacion) {
         this.idProyecto = idProyecto;
         this.nombreProyecto = nombreProyecto;
-        this.fechaInicio = fechaInicio;
         this.tiempoEstimado = tiempoEstimado;
+        this.fechaInicio = fechaInicio;
         this.precioTotal = precioTotal;
+        this.idUbicacion = idUbicacion;
+    }
+
+    public String getFechaInicio() {
+        return fechaInicio;
+    }
+
+    public void setFechaInicio(String fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }    
+
+    public int getIdUbicacion() {
+        return idUbicacion;
+    }
+
+    public void setIdUbicacion(int idUbicacion) {
+        this.idUbicacion = idUbicacion;
     }
 
     public int getIdProyecto() {
@@ -40,14 +58,6 @@ public class Proyecto {
 
     public void setNombreProyecto(String nombreProyecto) {
         this.nombreProyecto = nombreProyecto;
-    }
-
-    public String getFechaInicio() {
-        return fechaInicio;
-    }
-
-    public void setFechaInicio(String fechaInicio) {
-        this.fechaInicio = fechaInicio;
     }
 
     public String getTiempoEstimado() {
