@@ -21,7 +21,7 @@ public class FrmProyecto extends javax.swing.JInternalFrame {
     Proyecto proy = new Proyecto();
     boolean agregando=false;
     boolean editando = false;
-    String prueba2 = "SOLO PRUEBA";
+    String siprueba = "SOLO PRUEBA";
     
     
     public FrmProyecto() {
